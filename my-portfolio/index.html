@@ -1,0 +1,73 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neelam Meghana - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    
+    <!-- Spline 3D Background -->
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.75/build/spline-viewer.js"></script>
+<spline-viewer url="https://prod.spline.design/k58o23JwZ704WOUx/scene.splinecode"></spline-viewer>
+<audio id="welcome-audio">
+    <source src="assets/welcome.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+    <!-- Sidebar Navigation -->
+    <!-- Sidebar Navigation -->
+<nav class="sidebar">
+    <ul>
+        <li><a href="index.html" data-tooltip="Home"><i class="fas fa-home"></i></a></li>
+        <li><a href="intro.html" data-tooltip="About Me"><i class="fas fa-user"></i></a></li>
+        <li><a href="projects.html" data-tooltip="Projects"><i class="fas fa-code"></i></a></li>
+        <li><a href="experience.html" data-tooltip="Experience"><i class="fas fa-briefcase"></i></a></li>
+        <li><a href="hobbies.html" data-tooltip="Hobbies"><i class="fas fa-gamepad"></i></a></li>
+        <li><a href="skills.html" data-tooltip="Skills"><i class="fas fa-cogs"></i></a></li>
+        <li><a href="contact.html" data-tooltip="Contact"><i class="fas fa-envelope"></i></a></li>
+    </ul>
+</nav>
+
+
+
+<div class="content">
+    <h1 id="typewriter"></h1>
+    <p id="subtext">Data Science | AI | Full-Stack Development</p>
+</div>
+
+    
+   
+    
+
+    <script>
+    
+    const text = "Hi, I'm Meghana Neelam🤍";
+    let index = 0;
+
+    function typeWriter() {
+        if (index < text.length) {
+            document.getElementById("typewriter").innerHTML += text.charAt(index);
+            index++;
+            setTimeout(typeWriter, 100); // Adjust speed (lower = faster)
+        }
+    }
+
+    window.onload = typeWriter;
+
+
+        window.addEventListener('load', () => {
+            const audio = document.getElementById("welcome-audio");
+            audio.play().catch(error => {
+                console.log("Autoplay blocked: User interaction required.");
+            });
+        });
+    </script>
+    
+</body>
+</html>

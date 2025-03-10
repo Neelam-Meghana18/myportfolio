@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - Neelam Meghana</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+        <ul>
+            <li><a href="index.html" data-tooltip="Home"><i class="fas fa-home"></i></a></li>
+            <li><a href="intro.html" data-tooltip="About Me"><i class="fas fa-user"></i></a></li>
+            <li><a href="projects.html" data-tooltip="Projects"><i class="fas fa-code"></i></a></li>
+            <li><a href="experience.html" data-tooltip="Experience"><i class="fas fa-briefcase"></i></a></li>
+            <li><a href="hobbies.html" data-tooltip="Hobbies"><i class="fas fa-gamepad"></i></a></li>
+            <li><a href="skills.html" data-tooltip="Skills"><i class="fas fa-cogs"></i></a></li>
+            <li><a href="contact.html" data-tooltip="Contact"><i class="fas fa-envelope"></i></a></li>
+        </ul>
+    </nav>
+    <!-- Skills Section -->
+    <div class="skills-container">
+        <h1>My Skills</h1>
+
+        <div class="skills-grid">
+            <!-- Programming Languages -->
+            <div class="skill-category">
+                <h2><i class="fas fa-code"></i> Programming Languages</h2>
+                <ul>
+                    <li>Python</li>
+                    <li>JavaScript</li>
+                    <li>C</li>
+                    <li>C++</li>
+                </ul>
+            </div>
+
+            <!-- Web Development -->
+            <div class="skill-category">
+                <h2><i class="fas fa-laptop-code"></i> Web Development</h2>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Node.js</li>
+                    <li>Express.js</li>
+                    <li>Three.js</li>
+                </ul>
+            </div>
+
+            <!-- AI & Machine Learning -->
+            <div class="skill-category">
+                <h2><i class="fas fa-brain"></i> AI & Machine Learning</h2>
+                <ul>
+                    <li>Machine Learning</li>
+                    <li>Deep Learning</li>
+                    <li>Natural Language Processing (NLP)</li>
+                    <li>Computer Vision</li>
+                    <li>OpenCV</li>
+                    <li>Scikit-Learn</li>
+                    <li>TensorFlow</li>
+                </ul>
+            </div>
+
+            <!-- Database & Cloud -->
+            <div class="skill-category">
+                <h2><i class="fas fa-database"></i> Database & Cloud</h2>
+                <ul>
+                    <li>MySQL</li>
+                    <li>MongoDB</li>
+                </ul>
+            </div>
+
+            <!-- Tools & Technologies -->
+            <div class="skill-category">
+                <h2><i class="fas fa-tools"></i> Tools & Technologies</h2>
+                <ul>
+                    <li>Git & GitHub</li>
+                  
+                    <li>Jupyter Notebook</li>
+                    <li>Postman</li>
+                    <li>VS Code</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+<style>
+/* General Page Styling */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #CA763A, #134B42);
+    color: white;
+    overflow-y: auto; /* Enables vertical scrolling */
+}
+
+/* Sidebar Navigation */
+.sidebar {
+    position: fixed;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Skills Section */
+.skills-container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+/* Elegant Skill Card Design */
+.skill-category {
+    background: rgba(255, 255, 255, 0.1); /* Slight transparency */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(6px); /* Frosted glass look */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Soft Glow Effect */
+.skill-category::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 10%, transparent 70%);
+    top: -50%;
+    left: -50%;
+    transition: 0.5s ease-in-out;
+}
+
+/* Skill Icons */
+.skill-category i {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    color: #F8D57E; /* Soft gold for contrast */
+}
+
+/* Skill Titles */
+.skill-category h2 {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+    font-weight: bold;
+    color: #EDE0C3; /* Light warm tone */
+}
+
+/* Skill List */
+.skill-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-category ul li {
+    font-size: 1.2rem;
+    margin: 6px 0;
+    color: rgba(255, 255, 255, 0.85);
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover Effects */
+.skill-category:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.skill-category:hover ul li {
+    color: #F8D57E; /* Gold effect on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .skills-grid {
+        gap: 15px;
+    }
+
+    .skill-category {
+        padding: 25px;
+    }
+
+    .skill-category i {
+        font-size: 2.5rem;
+    }
+
+    .skill-category h2 {
+        font-size: 1.4rem;
+    }
+
+    .skill-category ul li {
+        font-size: 1rem;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .skills-grid {
+        gap: 15px;
+    }
+
+    .skill-category {
+        padding: 25px;
+    }
+
+    .skill-category i {
+        font-size: 2.5rem;
+    }
+
+    .skill-category h2 {
+        font-size: 1.4rem;
+    }
+
+    .skill-category ul li {
+        font-size: 1rem;
+    }
+}
+
+/* Responsive Design */
+
+
+</style>

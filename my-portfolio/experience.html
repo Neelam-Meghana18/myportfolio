@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience - Neelam Meghana</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+        <ul>
+            <li><a href="index.html" data-tooltip="Home"><i class="fas fa-home"></i></a></li>
+            <li><a href="intro.html" data-tooltip="About Me"><i class="fas fa-user"></i></a></li>
+            <li><a href="projects.html" data-tooltip="Projects"><i class="fas fa-code"></i></a></li>
+            <li><a href="experience.html" data-tooltip="Experience"><i class="fas fa-briefcase"></i></a></li>
+            <li><a href="hobbies.html" data-tooltip="Hobbies"><i class="fas fa-gamepad"></i></a></li>
+            <li><a href="skills.html" data-tooltip="Skills"><i class="fas fa-cogs"></i></a></li>
+            <li><a href="contact.html" data-tooltip="Contact"><i class="fas fa-envelope"></i></a></li>
+        </ul>
+    </nav>
+
+    <!-- Experience Section -->
+    <div class="experience-container">
+        <h1>My Experience</h1>
+
+        <div class="experience-grid">
+            <!-- Experience 1: Data Science Intern (CodSoft) -->
+            <div class="experience-card">
+                <i class="fas fa-database"></i>
+                <h2>Data Science Intern</h2>
+                <h3>CodSoft</h3>
+                <p><strong>Duration:</strong> jan 2025 - feb 2025</p>
+                <p>
+                    Gained hands-on experience in **data preprocessing, exploratory data analysis (EDA)**, and **machine learning models**.  
+                    Built **predictive models** and **interactive data visualizations** to extract insights from datasets.
+                </p>
+            </div>
+
+            <!-- Experience 2: Deloitte Virtual Simulation -->
+            <div class="experience-card">
+                <i class="fas fa-briefcase"></i>
+                <h2>Technology  Virtual Experience</h2>
+                <h3>Deloitte</h3>
+                <p><strong>Platform:</strong> Forage</p>
+                <p>
+                    Completed a **real-world consulting simulation** involving **data-driven problem-solving, business strategy,  
+                    and technology implementation** for digital transformation projects.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+<style>
+/* General Page Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #4A4E69, #22223B); /* Updated Classy Color Combination */
+    color: white;
+    overflow-y: auto; /* Enables scrolling */
+    min-height: 100vh;
+}
+
+/* Sidebar Navigation */
+.sidebar {
+    position: fixed;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Experience Section */
+.experience-container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding-bottom: 50px; /* Prevents content from cutting off */
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+/* Grid Layout for Experience */
+.experience-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+/* Experience Card Styling */
+.experience-card {
+    background: rgba(255, 255, 255, 0.12);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Experience Icons */
+.experience-card i {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: #F4A261; /* Soft Orange for Warmth */
+}
+
+/* Experience Title */
+.experience-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #E9C46A; /* Soft Gold */
+}
+
+/* Experience Details */
+.experience-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    color: #D3D3D3;
+}
+
+.experience-card p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Hover Effects */
+.experience-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .experience-grid {
+        gap: 15px;
+    }
+
+    .experience-card {
+        padding: 20px;
+    }
+
+    .experience-card i {
+        font-size: 2.5rem;
+    }
+
+    .experience-card h2 {
+        font-size: 1.6rem;
+    }
+
+    .experience-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .experience-card p {
+        font-size: 1.1rem;
+    }
+}
+</style>

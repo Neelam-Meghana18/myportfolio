@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Neelam Meghana</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+        <ul>
+            <li><a href="index.html" data-tooltip="Home"><i class="fas fa-home"></i></a></li>
+            <li><a href="intro.html" data-tooltip="About Me"><i class="fas fa-user"></i></a></li>
+            <li><a href="projects.html" data-tooltip="Projects"><i class="fas fa-code"></i></a></li>
+            <li><a href="experience.html" data-tooltip="Experience"><i class="fas fa-briefcase"></i></a></li>
+            <li><a href="hobbies.html" data-tooltip="Hobbies"><i class="fas fa-gamepad"></i></a></li>
+            <li><a href="skills.html" data-tooltip="Skills"><i class="fas fa-cogs"></i></a></li>
+            <li><a href="contact.html" data-tooltip="Contact"><i class="fas fa-envelope"></i></a></li>
+        </ul>
+    </nav>
+
+    <h1>My Projects</h1>
+
+    <div class="projects-container">
+        <div class="projects-grid">
+            <!-- Project 1: Veeva -->
+            <div class="project-card">
+                <img src="assets/veeva.png" alt="Veeva Logo">
+                <div class="project-info">
+                    <h2>Veeva – Intelligent Blood Donation & Matching System</h2>
+                    <p>
+                        A full-stack web application designed to enhance <strong>blood donation and recipient matching</strong> 
+                        using <strong>machine learning algorithms</strong>. The system incorporates <strong>real-time donor-recipient ranking, 
+                        location-based search</strong>, and <strong>automated alerts</strong> via WhatsApp & email.
+                    </p>
+                    <p><strong>Technologies Used:</strong> Node.js, Express.js, MySQL, HTML, CSS, JavaScript</p>
+                </div>
+            </div>
+
+            <!-- Project 2: PlastiScanX -->
+            <div class="project-card">
+                <img src="assets/plastiscanx.jpg" alt="PlastiScanX Logo">
+                <div class="project-info">
+                    <h2>PlastiScanX – Data-Driven Microplastic Risk Insights</h2>
+                    <p>
+                        An AI-powered system that provides insights into <strong>microplastic exposure risks</strong> using  
+                        <strong>QR scanning, AI chatbot analysis, and an interactive risk assessment pie chart</strong>.  
+                        The chatbot analyzes user habits and generates <strong>personalized health reports (PDFs)</strong>.
+                    </p>
+                    <p><strong>Technologies Used:</strong> Flask, OpenCV, RandomForest ML, JavaScript</p>
+                </div>
+            </div>
+
+            <!-- Project 3: Pencilfy -->
+            <div class="project-card">
+                <img src="assets/og.jpg" alt="Pencilfy Logo">
+                <div class="project-info">
+                    <h2>Pencilfy – AI-Powered Image-to-Sketch Converter</h2>
+                    <p>
+                        A Python-based application that converts <strong>images into high-quality pencil sketches</strong>,  
+                        allowing users to adjust <strong>brightness & contrast</strong>. It also features a <strong>gender-based music  
+                        playback system</strong>, enhancing user engagement with an interactive UI.
+                    </p>
+                    <p><strong>Technologies Used:</strong> Python, OpenCV, Tkinter, Matplotlib</p>
+                </div>
+            </div>
+
+            <!-- Project 4: Sentiment Analysis -->
+            <div class="project-card">
+                <img src="assets/sentiment.jpg" alt="Sentiment Analysis Logo">
+                <div class="project-info">
+                    <h2>Sentiment Analysis Model on Business Reviews</h2>
+                    <p>
+                        Developed a <strong>machine learning model</strong> to analyze <strong>restaurant business reviews</strong> and  
+                        classify them as <strong>positive, neutral, or negative</strong>. The system extracts insights  
+                        using <strong>NLP techniques</strong> to help businesses improve customer experience.
+                    </p>
+                    <p><strong>Technologies Used:</strong> Python, NLP, Scikit-Learn, Pandas, Matplotlib</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function revealProjects() {
+            const cards = document.querySelectorAll(".project-card");
+            const triggerPoint = window.innerHeight * 0.85;
+    
+            cards.forEach((card) => {
+                const cardTop = card.getBoundingClientRect().top;
+                if (cardTop < triggerPoint) {
+                    card.classList.add("reveal");
+                }
+            });
+        }
+    
+        window.addEventListener("scroll", revealProjects);
+        window.addEventListener("load", revealProjects);
+    </script>
+    
+
+</body>
+</html>
+
+<style>
+/* General Page Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(100deg, #B4B4B4, #1F7779);
+    color: black;
+    overflow-y: auto;
+}
+
+/* Sidebar Navigation */
+.sidebar {
+    position: fixed;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Projects Section */
+.projects-container {
+    width: 90%;
+    max-width: 1400px;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 100%;
+}
+
+/* Full-Width Project Cards */
+.project-card {
+    width: 95%;
+    padding: 40px 5%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Project Images */
+.project-card img {
+    width: 300px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+/* Project Info */
+.project-info {
+    flex: 1;
+    text-align: left;
+    padding-left: 30px;
+}
+
+.project-info h2 {
+    font-size: 2rem;
+}
+
+.project-info p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+}
+
+/* Hover Effect */
+.project-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Reveal Animation */
+.project-card {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.project-card.reveal {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Project Cards - Hidden by Default */
+.project-card {
+    opacity: 0;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* First Project - Slide in from Left */
+.project-card:nth-child(1) {
+    transform: translateX(-100px);
+}
+
+/* Second Project - Slide in from Right */
+.project-card:nth-child(2) {
+    transform: translateX(100px);
+}
+
+/* Remaining Projects - Slide in from Bottom */
+.project-card:nth-child(3),
+.project-card:nth-child(4) {
+    transform: translateY(50px);
+}
+
+/* When Card is Visible */
+.project-card.reveal {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project-card img {
+        width: 180px;
+    }
+}
+</style>
+
+

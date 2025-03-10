@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Neelam Meghana</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+        <ul>
+            <li><a href="index.html" data-tooltip="Home"><i class="fas fa-home"></i></a></li>
+            <li><a href="intro.html" data-tooltip="About Me"><i class="fas fa-user"></i></a></li>
+            <li><a href="projects.html" data-tooltip="Projects"><i class="fas fa-code"></i></a></li>
+            <li><a href="experience.html" data-tooltip="Experience"><i class="fas fa-briefcase"></i></a></li>
+            <li><a href="hobbies.html" data-tooltip="Hobbies"><i class="fas fa-gamepad"></i></a></li>
+            <li><a href="skills.html" data-tooltip="Skills"><i class="fas fa-cogs"></i></a></li>
+            <li><a href="contact.html" data-tooltip="Contact"><i class="fas fa-envelope"></i></a></li>
+        </ul>
+    </nav>
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Left Side - Profile Image -->
+        <div class="image-container">
+            <img id="profile-pic" src="meghana.jpg" alt="Neelam Meghana">
+        </div>
+        
+
+        <!-- Right Side - Intro Text -->
+        <div class="intro-text">
+            <h1>Hello,<span class="highlight">I am Maggie</span></h1>
+            <div class="intro-text"> 
+    <p id="typewriter"></p>
+</div>
+    <script>
+    const textArray = [
+        "A technology enthusiast with a love for Data Science, Machine Learning, and Full-Stack Development. ",
+        "I thrive on solving complex problems, building innovative digital experiences, and learning new things. ",
+        "From writing my first 'Hello World' to building data-driven AI models, ",
+        "my journey in tech has been one of curiosity, innovation, and constant learning. ",
+        "I thrive on challenges, and I love pushing boundaries to create impactful digital experiences. ",
+        "Driven by passion.Inspired by innovation.Ready to make a difference.🚀"
+    ];
+
+    let index = 0;
+    let paraIndex = 0;
+    const typewriterElement = document.getElementById("typewriter");
+
+    function typeWriter() {
+        if (paraIndex < textArray.length) {
+            if (index < textArray[paraIndex].length) {
+                typewriterElement.innerHTML += textArray[paraIndex].charAt(index);
+                index++;
+                setTimeout(typeWriter, 20); 
+                // Adjust typing speed
+            } else {
+                
+                typewriterElement.innerHTML += "<br>"; // Add spacing between paragraphs
+                index = 0;
+                paraIndex++;
+                setTimeout(typeWriter, 400); // Pause before starting next paragraph
+            }
+        }
+    }
+
+    window.onload = typeWriter;
+</script>
+        </div>
+    </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
+
+<style>
+/* General Page Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #ff7494, #75ebfd);
+    color: rgb(31, 15, 15);
+}
+
+/* Sidebar Navigation */
+.sidebar {
+    position: fixed;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    font-size: 20px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background: white;
+    color: black;
+}
+
+/* Main Layout */
+.container {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #f69aaf, #88deeb);
+}
+
+/* Left Side - Profile Image */
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.image-container img {
+    width: 350px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 15px; /* Small border radius */
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3); /* Shadow effect */
+}
+
+/* Right Side - Text */
+.intro-text {
+    flex: 2;
+    padding: 25px;
+    text-align: left;
+}
+
+.intro-text h1 {
+    font-size: 3.2rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.intro-text p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+/* Highlight Effect */
+.highlight {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 5px 10px;
+    border-radius: 8px;
+}
+
+/* Motto Styling */
+.motto {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #FDFD96;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Typewriter Text */
+#typewriter {
+    font-size: 1.5rem;
+    font-weight: 300;
+    white-space: pre-wrap;
+    overflow: hidden;
+    display: inline-block;
+    border-right: 3px solid white; /* Blinking cursor effect */
+    line-height: 1.6;
+}
+
+/* Blinking Cursor Animation */
+@keyframes blinkCursor {
+    50% {
+        border-color: transparent;
+    }
+}
+#typewriter {
+    animation: blinkCursor 0.8s infinite;
+}
+
+/* Profile Picture Animation */
+#profile-pic {
+    
+    opacity: 0; /* Initially hidden */
+    transform: translateY(50px) scale(0.8); /* Starts slightly down and small */
+    animation: revealImage 1.5s ease-out forwards;
+    width: 350px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 15px; /* Small border radius */
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Keyframes for Reveal Animation */
+@keyframes revealImage {
+    0% {
+        opacity: 0;
+        transform: translateY(50px) scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+</style>
